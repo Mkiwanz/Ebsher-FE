@@ -1,4 +1,4 @@
-import "../../AppStyle.css";
+
 const ServicesProvided = () => {
   return (
     <div className="container-fluid py-5" id="service">

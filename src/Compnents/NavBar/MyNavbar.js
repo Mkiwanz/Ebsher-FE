@@ -1,7 +1,5 @@
 import React from "react";
 import { Navbar, Nav, button } from "react-bootstrap";
-// import "bootstrap/dist/css/bootstrap.min.css";
-import "../../AppStyle.css";
 
 
 const MyNavbar = () => {

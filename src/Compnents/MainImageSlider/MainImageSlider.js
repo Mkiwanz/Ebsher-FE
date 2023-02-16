@@ -1,4 +1,4 @@
-import "../../AppStyle.css";
+
 export const MainImageSlider = () => {
   return (
     <div className="container-fluid p-0 mb-5 pb-5" id="home">

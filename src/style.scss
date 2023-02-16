@@ -1,9 +1,9 @@
 /******* Bootstrap Theming ********/
 
-$primary: #57A750;
+$primary: #57a750;
 $secondary: #F3F6FF;
 $light: #FFFFFF;
-$dark: #023d2a;
+$dark: #22395d;
 
 $font-family-sans-serif: 'Montserrat', sans-serif;
 
@@ -21,11 +21,9 @@ $enable-rounded: false;
 
 $border-width: 2px;
 
-@import "./bootstrap/scss/bootstrap";
+@import "bootstrap/scss/bootstrap";
 
 
-
-/********** Template CSS ************/
 h1, h2, h3 {
     font-weight: 700 !important;
 }
@@ -98,9 +96,9 @@ h4, h5, h6 {
     }
 }
 
-.navbar-dark {
-    display: none;
-}
+// .navbar-dark {
+//     display: none;
+// }
 
 .navbar-dark .navbar-nav .nav-link {
     padding: 25px 10px;
@@ -195,7 +193,7 @@ h4, h5, h6 {
 }
 
 .bg-gallery {
-    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../Resources/img/gallery.jpg), no-repeat center center;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(./Resources/img/gallery.jpg), no-repeat center center;
     background-size: cover;
 }
 

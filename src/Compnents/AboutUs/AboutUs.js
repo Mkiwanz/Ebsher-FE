@@ -1,4 +1,3 @@
-import "../../AppStyle.css";
 const AboutUs = () => {
   return (
     <div className="container-fluid py-5" id="about">

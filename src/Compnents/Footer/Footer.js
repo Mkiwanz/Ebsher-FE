@@ -1,4 +1,4 @@
-import "../../AppStyle.css";
+
 export const Footer = () => {
   return (
     <div>

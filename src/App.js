@@ -7,8 +7,8 @@ import FAQs from "./Compnents/FAQ/FAQ";
 import Contact from "./Compnents/Contact/Contact";
 import MyNavbar from "./Compnents/NavBar/MyNavbar";
 import { Footer } from "./Compnents/Footer/Footer";
-import "./scss/style.scss";
-
+import "./AppStyle.css";
+import "./style.scss";
 
 function App() {
   return (
