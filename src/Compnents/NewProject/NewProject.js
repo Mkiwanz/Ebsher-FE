@@ -3,6 +3,8 @@ import axios from "axios";
 import { TextField, Button, Typography, Box } from "@mui/material";
 
 import "./NewProject.css";
+import UploadProjectImages from "../UploadProjectImages/UploadProjectImages";
+import { Link, Navigate, useNavigate } from "react-router-dom";
 
 const NewProject = () => {
   const [title, setTitle] = useState("");
@@ -13,6 +15,7 @@ const NewProject = () => {
   const [note, setNote] = useState("");
   const [images, setImages] = useState([]);
   const [previewImages, setPreviewImages] = useState([]);
+  const navigate = useNavigate();
 
   const handleTitleChange = (e) => {
     setTitle(e.target.value);
@@ -51,13 +54,13 @@ const NewProject = () => {
     e.preventDefault();
     // const form = document.querySelector("form");
     const formData = new FormData();
-    formData.append('title', title);
-    formData.append('description', description);
-    images.forEach((image) => formData.append('images', image));
-    formData.append('projectDescription', projectDescription);
-    formData.append('location', location);
-    formData.append('date', date);
-    formData.append('note', note);
+    formData.append("title", title);
+    formData.append("description", description);
+    // images.forEach((image) => formData.append('images', image));
+    formData.append("projectDescription", projectDescription);
+    formData.append("location", location);
+    formData.append("date", date);
+    formData.append("note", note);
     const data = {
       title: title,
       description: description,
@@ -65,12 +68,14 @@ const NewProject = () => {
       location: location,
       date: date, // formatted as a string in ISO 8601 format
       note: note,
-      images: images, // array of image files
     };
-    console.log(formData);
+    console.log(data);
     axios
       .post("/api/v1/projects", data)
-      .then((res) => console.log(res.data))
+      .then((res) => {
+        console.log(res.data);
+        navigate(`/uploadProjectImages/${res.data}`);
+      })
       .catch((err) => console.log(err));
 
     // setTitle("");
@@ -137,7 +142,7 @@ const NewProject = () => {
         value={note}
         onChange={handleNoteChange}
       />
-      <label>
+      {/* <label>
         <Typography variant="subtitle1" gutterBottom>
           Images
         </Typography>
@@ -152,7 +157,7 @@ const NewProject = () => {
         {previewImages.map((image) => (
           <img src={image} alt="" key={image} />
         ))}
-      </div>
+      </div> */}
       <Button type="submit" variant="contained">
         Submit
       </Button>
