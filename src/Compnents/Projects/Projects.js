@@ -49,7 +49,6 @@ function Projects() {
       try {
         const response = await axios.get("api/v1/projects");
         setProjectsData(response.data);
-        console.log(response.data);
       } catch (err) {
         console.error(err);
       }

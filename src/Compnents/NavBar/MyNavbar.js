@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const MyNavbar = () => {
   return (
@@ -39,6 +40,7 @@ const MyNavbar = () => {
           <a href="#contact" className="nav-item nav-link">
             Contact
           </a>
+          <Link to="/newProject">New Project</Link>
         </div>
       </div>
     </nav>
