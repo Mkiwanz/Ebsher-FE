@@ -31,6 +31,8 @@ function ProjectDetails() {
         {projectDetails.images ? (
           <ImageSlider slides={projectDetails.images} />
         ) : null}
+        <br />
+        <br />
         <h1>{projectDetails.title}</h1>
         <p>{projectDetails.description}</p>
         <p>{projectDetails.projectDescription}</p>

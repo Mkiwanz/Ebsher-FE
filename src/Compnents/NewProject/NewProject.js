@@ -15,10 +15,7 @@ const NewProject = () => {
   const [location, setLocation] = useState("");
   const [date, setDate] = useState("");
   const [note, setNote] = useState("");
-  const [images, setImages] = useState([]);
-  const [previewImages, setPreviewImages] = useState([]);
   const navigate = useNavigate();
-  const totalSteps = 2;
 
   const handleTitleChange = (e) => {
     setTitle(e.target.value);
@@ -68,8 +65,6 @@ const NewProject = () => {
     setLocation("");
     setDate("");
     setNote("");
-    setImages([]);
-    setPreviewImages([]);
   };
 
   return (

@@ -65,10 +65,11 @@ function Projects() {
       naturalSlideHeight={220}
       totalSlides={projectsData.length}
       visibleSlides={3}
+      className="container"
     >
       <Slider>
         {projectsData.map((project, index) => (
-          <Link to={`/projects/${project.id}`}>
+          <Link to={`/projects/${project.id}`} key={project.id}>
             <Slide index={index} key={project.id}>
               <ProjectCard project={project} />
             </Slide>

@@ -1,10 +1,10 @@
 
 export const MainImageSlider = () => {
   return (
-    <div className="container-fluid p-0 mb-5 pb-5" id="home">
+    <div className="container-fluid p-0 mb-5 pb-5" >
       <div
         id="header-carousel"
-        className="carousel slide carousel-fade"
+        className="carousel carousel-fade"
         data-ride="carousel"
       >
         <div className="carousel-inner">

@@ -18,11 +18,11 @@ const MyNavbar = () => {
         id="navbarCollapse"
       >
         <div className="navbar-nav ml-auto py-0">
-          <a href="#home" className="nav-item nav-link active">
+          <div className="nav-item nav-link active">
             <Link to="/" style={{ textDecoration: "none" }}>
               Home
             </Link>
-          </a>
+          </div>
           <a href="#about" className="nav-item nav-link">
             About
           </a>
@@ -43,14 +43,14 @@ const MyNavbar = () => {
           <a href="#contact" className="nav-item nav-link">
             Contact
           </a>
-          <a href="#addProject" className="nav-item nav-link">
+          <div className="nav-item nav-link">
             <Link
               to="/newProject"
               style={{ textDecoration: "none", color: "white" }}
             >
               New Project
             </Link>
-          </a>
+          </div>
         </div>
       </div>
     </nav>
