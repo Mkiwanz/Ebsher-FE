@@ -15,6 +15,7 @@ import {
 } from "pure-react-carousel";
 import "pure-react-carousel/dist/react-carousel.es.css";
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import "./Projects.css";
 
 function ProjectCard({ project }) {
@@ -24,7 +25,9 @@ function ProjectCard({ project }) {
         component="img"
         height="140"
         image={
-          project.images != null && project.images.length > 0&& project.images[0] != null
+          project.images != null &&
+          project.images.length > 0 &&
+          project.images[0] != null
             ? project.images[0].path
             : null
         }
@@ -65,9 +68,11 @@ function Projects() {
     >
       <Slider>
         {projectsData.map((project, index) => (
-          <Slide index={index} key={project.id}>
-            <ProjectCard project={project} />
-          </Slide>
+          <Link to={`/projects/${project.id}`}>
+            <Slide index={index} key={project.id}>
+              <ProjectCard project={project} />
+            </Slide>
+          </Link>
         ))}
       </Slider>
       <IconButton

@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import { TextField, Button, Typography, Box } from "@mui/material";
 import { Navigate, useNavigate, useParams } from "react-router-dom";
+import StepCompletionLine from "../StepCompletionLine/StepCompletionLine";
 
 const UploadProjectImages = () => {
   const [previewImages, setPreviewImages] = useState([]);
@@ -29,6 +30,7 @@ const UploadProjectImages = () => {
   };
   return (
     <div>
+      <StepCompletionLine currentStep={2} />
       <label>
         <Typography variant="subtitle1" gutterBottom>
           Images
