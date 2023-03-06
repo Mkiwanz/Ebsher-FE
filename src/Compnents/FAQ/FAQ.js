@@ -1,4 +1,3 @@
-
 const FAQs = () => {
   return (
     <div className="container-fluid py-5" id="faqs">
@@ -18,19 +17,28 @@ const FAQs = () => {
               <h3 className="mb-4">Why Switch to Solar?</h3>
               <h5 className="mb-3">
                 <i className="fa fa-check text-success float-md-right mr-2 mr-md-0 ml-md-2"></i>
-                Vero dolor amet no eos ipsum erat
+                <b>Save money on your energy bills:</b> Solar panels allow you
+                to generate your own electricity, reducing or even eliminating
+                your reliance on the grid.
               </h5>
               <h5 className="mb-3">
                 <i className="fa fa-check text-success float-md-right mr-2 mr-md-0 ml-md-2"></i>
-                Lorem tempor tempor gubergren dolor dolor dolor
+                <b>Increase the value of your property:</b> Installing solar
+                panels on your home or business can increase its value.
+                Potential buyers may be willing to pay more for a property with
+                solar panels already installed.
               </h5>
               <h5 className="mb-3">
                 <i className="fa fa-check text-success float-md-right mr-2 mr-md-0 ml-md-2"></i>
-                Nonumy tempor dolores sadipscing duo
+                <b>Reduce your carbon footprint:</b> Solar energy is a clean and
+                renewable source of energy, which means it does not produce
+                harmful emissions that contribute to climate change.
               </h5>
               <h5 className="mb-0">
                 <i className="fa fa-check text-success float-md-right mr-2 mr-md-0 ml-md-2"></i>
-                Kasd dolor ea dolores ut nonumy
+                <b>Energy independence:</b> Generating your own electricity
+                means that you become less reliant on the grid and the utility
+                companies.
               </h5>
             </div>
           </div>
@@ -38,20 +46,29 @@ const FAQs = () => {
             <div className="text-center text-md-left ml-md-3">
               <h3 className="mb-4">Why Choose Us?</h3>
               <h5 className="mb-3">
-                <i className="fa fa-check text-success mr-2"></i>Vero dolor amet
-                no eos ipsum erat
+                <i className="fa fa-check text-success mr-2"></i>
+                <b>Expertise:</b> Our team of experienced professionals has the
+                knowledge and expertise to design and install the best solar
+                energy system for your specific needs
               </h5>
               <h5 className="mb-3">
-                <i className="fa fa-check text-success mr-2"></i>Lorem tempor
-                tempor gubergren dolor dolor dolor
+                <i className="fa fa-check text-success mr-2"></i>
+                <b>Quality:</b> We use only the highest quality solar panels and
+                components to ensure that your system is reliable and
+                long-lasting
               </h5>
               <h5 className="mb-3">
-                <i className="fa fa-check text-success mr-2"></i>Nonumy tempor
-                dolores sadipscing duo
+                <i className="fa fa-check text-success mr-2"></i>
+                <b>Social Responsibility:</b> We are dedicated to promoting
+                sustainability and reducing our own carbon footprint. We are
+                involved in various community initiatives that align with our
+                values and promote environmental responsibility.
               </h5>
               <h5 className="mb-0">
-                <i className="fa fa-check text-success mr-2"></i>Kasd dolor ea
-                dolores ut nonumy
+                <i className="fa fa-check text-success mr-2"></i>
+                <b>Customer Service:</b> We are committed to providing
+                exceptional customer service and support throughout the entire
+                process, from consultation to installation and beyond.
               </h5>
             </div>
           </div>

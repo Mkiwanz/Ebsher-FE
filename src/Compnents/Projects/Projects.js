@@ -60,47 +60,58 @@ function Projects() {
   }, []);
 
   return (
-    <CarouselProvider
-      naturalSlideWidth={345}
-      naturalSlideHeight={220}
-      totalSlides={projectsData.length}
-      visibleSlides={3}
-      className="container"
-    >
-      <Slider>
-        {projectsData.map((project, index) => (
-          <Link to={`/projects/${project.id}`} key={project.id}>
-            <Slide index={index} key={project.id}>
-              <ProjectCard project={project} />
-            </Slide>
-          </Link>
-        ))}
-      </Slider>
-      <IconButton
-        sx={{
-          position: "absolute",
-          top: "50%",
-          left: 0,
-          zIndex: 1,
-          backgroundColor: "rgba(255, 255, 255, 0.5)",
-        }}
-        onClick={() => Slider.previous()}
+    <div>
+      <div className="section-title position-relative text-center">
+        <h6
+          className="text-uppercase text-primary mb-3"
+          style={{ letterSpacing: 3 }}
+        >
+          PROJECTS
+        </h6>
+        <h1 className="font-secondary display-4">Our Recent Projects</h1>
+      </div>
+      <CarouselProvider
+        naturalSlideWidth={345}
+        naturalSlideHeight={250}
+        totalSlides={projectsData.length}
+        visibleSlides={3}
+        className=" container"
       >
-        <ButtonBack />
-      </IconButton>
-      <IconButton
-        sx={{
-          position: "absolute",
-          top: "50%",
-          right: 0,
-          zIndex: 1,
-          backgroundColor: "rgba(255, 255, 255, 0.5)",
-        }}
-        onClick={() => Slider.next()}
-      >
-        <ButtonNext />
-      </IconButton>
-    </CarouselProvider>
+        <Slider className="carousel-slide">
+          {projectsData.map((project, index) => (
+            <Link to={`/projects/${project.id}`} key={project.id}>
+              <Slide index={index} key={project.id}>
+                <ProjectCard project={project} />
+              </Slide>
+            </Link>
+          ))}
+        </Slider>
+        <IconButton
+          sx={{
+            position: "absolute",
+            top: "50%",
+            left: 0,
+            zIndex: 1,
+            backgroundColor: "rgba(255, 255, 255, 0.5)",
+          }}
+          onClick={() => Slider.previous()}
+        >
+          <ButtonBack />
+        </IconButton>
+        <IconButton
+          sx={{
+            position: "absolute",
+            top: "50%",
+            right: 0,
+            zIndex: 1,
+            backgroundColor: "rgba(255, 255, 255, 0.5)",
+          }}
+          onClick={() => Slider.next()}
+        >
+          <ButtonNext />
+        </IconButton>
+      </CarouselProvider>
+    </div>
   );
 }
 

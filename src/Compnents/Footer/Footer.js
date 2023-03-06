@@ -1,3 +1,6 @@
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faFacebook } from '@fortawesome/free-brands-svg-icons'
+
 
 export const Footer = () => {
   return (
@@ -20,7 +23,7 @@ export const Footer = () => {
                   >
                     Our Office
                   </h5>
-                  <p className="mb-4 m-md-0">Location, City, Country</p>
+                  <p className="mb-4 m-md-0">Al-Hashmi Street, Irbid, Jordan</p>
                 </div>
               </div>
               <div className="col-md-4">
@@ -31,7 +34,7 @@ export const Footer = () => {
                   >
                     Email Us
                   </h5>
-                  <p className="mb-4 m-md-0">info@example.com</p>
+                  <p className="mb-4 m-md-0">Info@Ebsher-solar.com</p>
                 </div>
               </div>
               <div className="col-md-4">
@@ -42,7 +45,7 @@ export const Footer = () => {
                   >
                     Call Us
                   </h5>
-                  <p className="m-0">+012 345 6789</p>
+                  <p className="m-0">+962 7 7755 2904</p>
                 </div>
               </div>
             </div>
@@ -50,37 +53,32 @@ export const Footer = () => {
           <div className="col-lg-7 col-md-12">
             <div className="row">
               <div className="col-md-6 mb-5">
-                <p>
-                  Et et amet ut elitr ipsum sit dolor dolor dolore. Sit accusam
-                  elitr ut diam sit rebum. Eirmod duo kasd diam vero labore sea,
-                  est et et lorem ut at erat, gubergren ipsum et ipsum elitr et
-                  rebum rebum
-                </p>
+                <p>Follow Us in Social Media</p>
                 <div className="d-flex justify-content-start mt-4">
-                  <a
+                  {/* <a
                     className="btn btn-lg btn-outline-light btn-lg-square mr-2"
                     href="#"
                   >
                     <i className="fab fa-twitter"></i>
-                  </a>
+                  </a> */}
                   <a
                     className="btn btn-lg btn-outline-light btn-lg-square mr-2"
-                    href="#"
+                    href="https://www.facebook.com/Ebsher.co"
                   >
-                    <i className="fab fa-facebook-f"></i>
+                    <FontAwesomeIcon icon={faFacebook} />
                   </a>
-                  <a
+                  {/* <a
                     className="btn btn-lg btn-outline-light btn-lg-square mr-2"
                     href="#"
                   >
                     <i className="fab fa-linkedin-in"></i>
-                  </a>
-                  <a
+                  </a> */}
+                  {/* <a
                     className="btn btn-lg btn-outline-light btn-lg-square"
                     href="#"
                   >
                     <i className="fab fa-instagram"></i>
-                  </a>
+                  </a> */}
                 </div>
               </div>
               <div className="col-md-6 mb-5">
@@ -110,32 +108,7 @@ export const Footer = () => {
               </div>
             </div>
           </div>
-          <div className="col-lg-5 col-md-12 mb-5">
-            <h5
-              className="text-primary text-uppercase mb-4"
-              style={{ letterSpacing: 5 }}
-            >
-              Newsletter
-            </h5>
-            <p>
-              Rebum labore lorem dolores kasd est, et ipsum amet et at kasd,
-              ipsum sea tempor magna tempor. Accu kasd sed ea duo ipsum. Dolor
-              duo eirmod sea justo no lorem est diam
-            </p>
-            <div className="w-100">
-              <div className="input-group">
-                <input
-                  type="text"
-                  className="form-control border-light"
-                  style={{ padding: 30 }}
-                  placeholder="Your Email Address"
-                />
-                <div className="input-group-append">
-                  <button className="btn btn-primary px-4">Sign Up</button>
-                </div>
-              </div>
-            </div>
-          </div>
+          
         </div>
       </div>
       <div
@@ -143,7 +116,7 @@ export const Footer = () => {
         style={{ borderColor: (256, 256, 256, 0.05) }}
       >
         <p className="m-0 text-white">
-          &copy; <a href="#">Domain Name</a>. All Rights Reserved. Designed by{" "}
+          &copy; <a href="#">Ebsher</a>. All Rights Reserved. Designed by Mohammad Kiwan{" "}
         </p>
       </div>
     </div>
