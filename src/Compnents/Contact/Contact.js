@@ -1,5 +1,45 @@
+import { Button } from "@mui/material";
+import axios from "axios";
+import { useState } from "react";
 
 const Contact = () => {
+  const [senderName, setSenderName] = useState("");
+  const [senderEmail, setSenderEmail] = useState("");
+  const [subject, setSubject] = useState("");
+  const [message, setMessage] = useState("");
+
+  const handleSenderNameChange = (e) => {
+    setSenderName(e.target.value);
+  };
+
+  const handleSenderEmailChange = (e) => {
+    setSenderEmail(e.target.value);
+  };
+
+  const handleSubjectChange = (e) => {
+    setSubject(e.target.value);
+  };
+
+  const handleMessageChange = (e) => {
+    setMessage(e.target.value);
+  };
+  const handleSendEmail = () => {
+    const emailMessage = {
+      senderName: senderName,
+      senderEmail: senderEmail,
+      subject: subject,
+      message: message,
+    };
+    console.log(emailMessage);
+    axios
+      .post("api/v1/emails", emailMessage)
+      .then((res) => {
+        alert("Email Sent, Thanks!");
+      })
+      .catch((err) => {
+        console.error(err.message);
+      });
+  };
   return (
     <div className="container-fluid py-5" id="contact">
       <div className="container py-5">
@@ -26,6 +66,7 @@ const Contact = () => {
                       placeholder="Your Name"
                       required="required"
                       data-validation-required-message="Please enter your name"
+                      onChange={handleSenderNameChange}
                     />
                     <p className="help-block text-danger"></p>
                   </div>
@@ -37,6 +78,7 @@ const Contact = () => {
                       placeholder="Your Email"
                       required="required"
                       data-validation-required-message="Please enter your email"
+                      onChange={handleSenderEmailChange}
                     />
                     <p className="help-block text-danger"></p>
                   </div>
@@ -49,6 +91,7 @@ const Contact = () => {
                     placeholder="Subject"
                     required="required"
                     data-validation-required-message="Please enter a subject"
+                    onChange={handleSubjectChange}
                   />
                   <p className="help-block text-danger"></p>
                 </div>
@@ -60,17 +103,19 @@ const Contact = () => {
                     placeholder="Message"
                     required="required"
                     data-validation-required-message="Please enter your message"
+                    onChange={handleMessageChange}
                   ></textarea>
                   <p className="help-block text-danger"></p>
                 </div>
                 <div className="text-center">
-                  <button
-                    className="btn btn-primary font-weight-bold py-3 px-5"
-                    type="submit"
+                  <a
+                    className="btn btn-primary font-weight-bold py-3 px-5 text-white"
+                    // type="submit"
                     id="sendMessageButton"
+                    onClick={handleSendEmail}
                   >
                     Send Message
-                  </button>
+                  </a>
                 </div>
               </form>
             </div>

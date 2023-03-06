@@ -74,7 +74,7 @@ const FAQs = () => {
           </div>
           <div className="col-md-12 text-center pt-3">
             <a
-              className="btn btn-primary font-weight-bold py-3 px-5 mt-4 btn-scroll"
+              className="btn btn-primary font-weight-bold py-3 px-5 mt-4 btn-scroll text-white"
               href="#contact"
             >
               Get A Quote

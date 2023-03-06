@@ -43,7 +43,7 @@ const AboutUs = () => {
             {isFullTextDisplayed ? text : shortenedText}
             <button
               onClick={toggleFullTextDisplay}
-              className="btn btn-primary font-weight-bold py-3 px-5 mt-2"
+              className="btn btn-primary font-weight-bold py-3 px-5 mt-2 text-white"
             >
               {isFullTextDisplayed ? "Read Less" : "Read More"}
             </button>
