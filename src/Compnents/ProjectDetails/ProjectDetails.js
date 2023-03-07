@@ -14,7 +14,6 @@ function ProjectDetails() {
       .get(`api/v1/projects/${id}`)
       .then((res) => {
         setProjectDetails(res.data);
-        console.log(res.data);
       })
       .catch((err) => {
         console.error(err.message);

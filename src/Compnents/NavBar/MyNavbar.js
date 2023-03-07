@@ -1,8 +1,9 @@
 import React from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
+import Cookies from "js-cookie";
 
 const MyNavbar = () => {
-  const navigate = useNavigate();
+  const isLoggedIn = Cookies.get("isLoggedIn");
   return (
     <nav className="navbar fixed-top shadow-sm navbar-expand-lg bg-dark navbar-dark py-1 py-lg-0 px-lg-5">
       <button
@@ -43,14 +44,16 @@ const MyNavbar = () => {
           <a href="#contact" className="nav-item nav-link">
             Contact
           </a>
-          <div className="nav-item nav-link">
-            <Link
-              to="/newProject"
-              style={{ textDecoration: "none", color: "white" }}
-            >
-              New Project
-            </Link>
-          </div>
+          {isLoggedIn ? (
+            <div className="nav-item nav-link">
+              <Link
+                to="/newProject"
+                style={{ textDecoration: "none", color: "white" }}
+              >
+                New Project
+              </Link>
+            </div>
+          ) : null}
         </div>
       </div>
     </nav>

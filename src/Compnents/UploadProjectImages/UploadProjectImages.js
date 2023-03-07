@@ -3,17 +3,19 @@ import axios from "axios";
 import { TextField, Button, Typography, Box } from "@mui/material";
 import { Navigate, useNavigate, useParams } from "react-router-dom";
 import StepCompletionLine from "../StepCompletionLine/StepCompletionLine";
+import Cookies from "js-cookie";
 
 const UploadProjectImages = () => {
   const [previewImages, setPreviewImages] = useState([]);
   const [images, setImages] = useState([]);
   const { id } = useParams();
   const navigate = useNavigate();
+  const isLoggedIn = Cookies.get("isLoggedIn");
+  const accessToken = Cookies.get("accessToken");
 
   const handelSubmitImages = () => {
     const formData = new FormData();
     images.forEach((image) => formData.append("images", image));
-    console.log(id);
     axios
       .post(`/api/v1/projects/${id}/images`, formData)
       .then((res) => navigate("/"))

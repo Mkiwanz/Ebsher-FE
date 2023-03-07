@@ -1,12 +1,11 @@
 import React, { useState } from "react";
 import axios from "axios";
-import { TextField, Button, Typography, Box } from "@mui/material";
-
+import { TextField, Button, Box } from "@mui/material";
 import "./NewProject.css";
-import UploadProjectImages from "../UploadProjectImages/UploadProjectImages";
-import { Link, Navigate, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import MyNavbar from "../NavBar/MyNavbar";
 import StepCompletionLine from "../StepCompletionLine/StepCompletionLine";
+import Cookies from "js-cookie";
 
 const NewProject = () => {
   const [title, setTitle] = useState("");
@@ -16,6 +15,8 @@ const NewProject = () => {
   const [date, setDate] = useState("");
   const [note, setNote] = useState("");
   const navigate = useNavigate();
+  const isLoggedIn = Cookies.get("isLoggedIn");
+  const accessToken = Cookies.get("accessToken");
 
   const handleTitleChange = (e) => {
     setTitle(e.target.value);
@@ -54,7 +55,6 @@ const NewProject = () => {
     axios
       .post("/api/v1/projects", data)
       .then((res) => {
-        console.log(res.data);
         navigate(`/uploadProjectImages/${res.data}`);
       })
       .catch((err) => console.log(err));
