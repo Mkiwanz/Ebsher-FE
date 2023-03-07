@@ -1,13 +1,27 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import "./ProjectDetails.css";
 import ImageSlider from "../ImageSlider/ImageSlide";
 import MyNavbar from "../NavBar/MyNavbar";
+import Cookies from "js-cookie";
 
 function ProjectDetails() {
   const [projectDetails, setProjectDetails] = useState({});
   const { id } = useParams();
+  const isLoggedIn = Cookies.get("isLoggedIn");
+  const navigate = useNavigate();
+
+  const handelDeleteProject = () => {
+    axios
+      .delete(`api/v1/projects/${id}`)
+      .then((res) => {
+        navigate("/");
+      })
+      .catch((err) => {
+        console.error(err.message);
+      });
+  };
 
   useEffect(() => {
     axios
@@ -38,13 +52,9 @@ function ProjectDetails() {
         <p>{projectDetails.location}</p>
         <p>{projectDetails.date}</p>
         <p>{projectDetails.note}</p>
-        {/* <div className="image-list">
-        {projectDetails.images
-          ? projectDetails.images.map((image) => (
-              <img key={image} src={image.path} alt="Project Image" />
-            ))
-          : null}
-      </div> */}
+        {isLoggedIn ? (
+          <button onClick={handelDeleteProject}>Remove Project</button>
+        ) : null}
       </div>
     </div>
   );

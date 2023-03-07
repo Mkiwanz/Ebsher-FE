@@ -30,7 +30,6 @@ const Contact = () => {
       subject: subject,
       message: message,
     };
-    console.log(emailMessage);
     axios
       .post("api/v1/emails", emailMessage)
       .then((res) => {
