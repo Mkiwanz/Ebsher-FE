@@ -1,3 +1,4 @@
+import "./ServicesProvided.css";
 const ServicesProvided = () => {
   return (
     <div className="container-fluid py-5" id="service">
@@ -16,11 +17,11 @@ const ServicesProvided = () => {
             <div className="product-item mb-2">
               <div className="product-img">
                 <img
-                  className="img-fluid"
+                  className="image-size"
                   src={require("../../Resources/img/product-1.jpg")}
                 />
               </div>
-              <div className="bg-secondary text-center p-4">
+              <div className="bg-secondary text-center text-size  p-4">
                 <h3 className="m-0">On Grid Solar Systems </h3>
               </div>
             </div>
@@ -29,11 +30,11 @@ const ServicesProvided = () => {
             <div className="product-item mb-2">
               <div className="product-img">
                 <img
-                  className="img-fluid"
+                  className="image-size"
                   src={require("../../Resources/img/carousel-2.jpg")}
                 />
               </div>
-              <div className="bg-secondary text-center p-4">
+              <div className="bg-secondary text-center text-size  p-4">
                 <h3 className="m-0">Off Grid Solar Systems</h3>
               </div>
             </div>
@@ -42,11 +43,11 @@ const ServicesProvided = () => {
             <div className="product-item mb-2">
               <div className="product-img">
                 <img
-                  className="img-fluid"
+                  className="image-size"
                   src={require("../../Resources/img/gallery-3.jpg")}
                 />
               </div>
-              <div className="bg-secondary text-center p-4">
+              <div className="bg-secondary text-center text-size  p-4">
                 <h3 className="m-0">Solar water pumping systems</h3>
               </div>
             </div>
@@ -55,11 +56,11 @@ const ServicesProvided = () => {
             <div className="product-item mb-2">
               <div className="product-img">
                 <img
-                  className="img-fluid"
-                  src={require("../../Resources/img/product-3.jpg")}
+                  className="image-size"
+                  src={require("../../Resources/img/cleaning.jpg")}
                 />
               </div>
-              <div className="bg-secondary text-center p-4">
+              <div className="bg-secondary text-center text-size  p-4">
                 <h3 className="m-0">Cleaning Services</h3>
               </div>
             </div>

@@ -4,6 +4,8 @@ import { TextField, Button, Typography, Box } from "@mui/material";
 import { Navigate, useNavigate, useParams } from "react-router-dom";
 import StepCompletionLine from "../StepCompletionLine/StepCompletionLine";
 import Cookies from "js-cookie";
+import MyNavbar from "../NavBar/MyNavbar";
+import { Footer } from "../Footer/Footer";
 
 const UploadProjectImages = () => {
   const [previewImages, setPreviewImages] = useState([]);
@@ -32,6 +34,10 @@ const UploadProjectImages = () => {
   };
   return (
     <div>
+      <MyNavbar />
+      <br />
+      <br />
+      <br />
       <StepCompletionLine currentStep={2} />
       <label>
         <Typography variant="subtitle1" gutterBottom>
@@ -49,7 +55,13 @@ const UploadProjectImages = () => {
           <img src={image} alt="" key={image} />
         ))}
       </div>
-      <button onClick={handelSubmitImages}>Submit</button>
+      <br />
+      <br />
+      <Button onClick={handelSubmitImages} variant="contained">
+        Submit
+      </Button>
+      {/* <button onClick={handelSubmitImages}>Submit</button> */}
+      <Footer />
     </div>
   );
 };

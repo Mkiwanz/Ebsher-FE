@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Cookies from "js-cookie";
 
 const MyNavbar = () => {
@@ -19,8 +19,8 @@ const MyNavbar = () => {
         id="navbarCollapse"
       >
         <div className="navbar-nav ml-auto py-0">
-          <div className="nav-item nav-link active">
-            <Link to="/" style={{ textDecoration: "none" }}>
+          <div className="nav-item nav-link">
+            <Link to="/" style={{ textDecoration: "none" , color: 'white'}}>
               Home
             </Link>
           </div>

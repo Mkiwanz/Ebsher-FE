@@ -63,7 +63,10 @@ function ProjectDetails() {
           <Grid xs={3}>
             <div className="ml-4 mt-4">
               <Typography variant="h4" component="h2">
-                {projectDetails.title}{" "}
+                <h1 className="section-title position-relative text-center">
+                  {" "}
+                  {projectDetails.title}
+                </h1>
               </Typography>
               <Divider variant="middle" dark />
               <br />
@@ -99,6 +102,7 @@ function ProjectDetails() {
                   <Typography>{projectDetails.description}</Typography>
                 </AccordionDetails>
               </Accordion>
+              <br />
               {isLoggedIn ? (
                 <button onClick={handelDeleteProject}>Remove Project</button>
               ) : null}
@@ -106,7 +110,7 @@ function ProjectDetails() {
           </Grid>
         </Grid>
       </div>
-      <Footer/>
+      <Footer />
     </div>
   );
 }

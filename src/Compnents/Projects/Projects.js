@@ -74,7 +74,7 @@ function Projects() {
         naturalSlideWidth={345}
         naturalSlideHeight={250}
         totalSlides={projectsData.length}
-        visibleSlides={3}
+        visibleSlides={3.1}
         className=" container"
       >
         <Slider className="carousel-slide">
@@ -96,7 +96,7 @@ function Projects() {
           }}
           onClick={() => Slider.previous()}
         >
-          <ButtonBack />
+          {/* <ButtonBack /> */}
         </IconButton>
         <IconButton
           sx={{
@@ -108,7 +108,7 @@ function Projects() {
           }}
           onClick={() => Slider.next()}
         >
-          <ButtonNext />
+          {/* <ButtonNext /> */}
         </IconButton>
       </CarouselProvider>
     </div>

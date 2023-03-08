@@ -6,6 +6,7 @@ import { useNavigate } from "react-router-dom";
 import MyNavbar from "../NavBar/MyNavbar";
 import StepCompletionLine from "../StepCompletionLine/StepCompletionLine";
 import Cookies from "js-cookie";
+import { Footer } from "../Footer/Footer";
 
 const NewProject = () => {
   const [title, setTitle] = useState("");
@@ -131,6 +132,7 @@ const NewProject = () => {
           Submit
         </Button>
       </Box>
+      <Footer />
     </div>
   );
 };

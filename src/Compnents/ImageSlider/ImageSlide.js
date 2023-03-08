@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
-import { FaArrowAltCircleRight, FaArrowAltCircleLeft } from 'react-icons/fa';
-import './imageSlider.css'
+import React, { useState } from "react";
+import "./imageSlider.css";
+import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
+import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
 
 const ImageSlider = (props) => {
   const [current, setCurrent] = useState(0);
@@ -19,17 +20,27 @@ const ImageSlider = (props) => {
   }
 
   return (
-    <section className='slider'>
-      <FaArrowAltCircleLeft className='left-arrow' onClick={prevSlide} />
-      <FaArrowAltCircleRight className='right-arrow' onClick={nextSlide} />
+    <section className="slider">
+      <ArrowBackIosIcon
+        className="left-arrow"
+        sx={{ color: "#57a750" }}
+        fontSize="large"
+        onClick={prevSlide}
+      />
+      <ArrowForwardIosIcon
+        className="right-arrow"
+        sx={{ color: "#57a750" }}
+        fontSize="large"
+        onClick={nextSlide}
+      />
       {props.slides.map((slide, index) => {
         return (
           <div
-            className={index === current ? 'slide active' : 'slide'}
+            className={index === current ? "slide active" : "slide"}
             key={index}
           >
             {index === current && (
-              <img src={slide.path} alt={slide.name} className='image' />
+              <img src={slide.path} alt={slide.name} className="image" />
             )}
           </div>
         );
